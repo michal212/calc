@@ -1,64 +1,122 @@
-#calc {
-    width: 400px;
-    height: 400px;
+body {
+    background: lightblue;
     display: flex;
-  flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 16px;
+    box-shadow: 1px 1px 14px 0px #6fb3d4;
+}
+
+#credits {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 16px;
+    font-size: 12px;
+    opacity: 0.5;
 }
 
 #screen {
     width: 400px;
     height: 80px;
-    background-color: rgb(37, 37, 37);
-    color: white;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background: rgb(37, 37, 37);
+    color: #fff;
     font-size: 24px;
-    text-align: right;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    
-    
-
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+#body {
+    width: 400px;
+}
 
-#operator-button{
+#operator-buttons {
     display: flex;
     width: 400px;
-    font-size: 24px;
+}
 
-}
-.operator-button{
+.operator-button {
+    width: 100px;
     height: 50px;
-    width: 400px;
     font-size: 24px;
-    border: 0;
+    background: #fff;
+    border: 1px solid whitesmoke;
+    transition: .1s all;
+    outline: none;
 }
-#numbers-body{
+
+.operator-button:hover {
+    transform: scale(1.1);
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+#numbers-body {
     display: flex;
     flex-direction: row;
     width: 400px;
 }
 
-#equal-div{
-    width:100px;
+#equal-div {
+    width: 100px;
     height: 250px;
 }
-#btn-equal{
+
+#btn-equal {
     width: 100px;
     height: 250px;
     font-size: 24px;
-    border: 0;
-    border-radius: 5px;
-    background-color: coral;
-
-
+    background: orange;
+    border: 1px solid whitesmoke;
+    transition: .1s all;
+    outline: none;
 }
-#numbers-div{
+
+#btn-equal:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#numbers-div {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
+
 .number-button {
-    width:100px;
+    width: 100px;
     height: 62.5px;
-    border: 0;
     font-size: 24px;
+    background: #fff;
+    border: 1px solid whitesmoke;
+    transition: .1s all;
+    outline: none;
+}
+
+.number-button:hover {
+    transform: scale(1.1);
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+.bottom-left-button {
+    border-bottom-left-radius: 16px;
+}
+
+.bottom-right-button {
+    border-bottom-right-radius: 16px;
 }
